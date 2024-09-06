@@ -17,11 +17,14 @@ The output classes being pathogenic, Likely pathogenic, uncertain significance (
 
 ## Installation
 
-Installation of Azurify and its dependencies are made easy and can be found within the setup.py file. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually.
+Azurify is written in python 3 and has additional dependencies that can be installed via pip. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually.
 ```
 git clone https://github.com/faryabiLab/Azurify.git
-cd Azurify
-python setup.py
+
+pip install catboost
+pip install pandas
+pip install tqdm
+
 ```
 ## Usage
 
@@ -43,7 +46,7 @@ You may include additional columns to the rquired tab-delimtied input and they w
 
 ## Runtime
 
-Azurify annotates 100,000 variants in approximately 30 minutes of runtime. You should expect to need more than 16GB of memory and longer runtimes as record volume increases.
+Azurify annotates 100,000 variants in approximately 30 minutes of runtime. You should expect to need more than 16GB of memory and longer runtimes as record volume increases. If you file that are much larger, considering breaking your input into smaller files if you are on a low memory machine. 
 
 ## The Azurify Project
 
