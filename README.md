@@ -47,6 +47,10 @@ Example Input:
 
 You may include additional columns to the rquired tab-delimtied input and they will be appended to your final results.
 
+## Creating your own model
+
+To create your own model using the Azurify feature set, simply run Azurify. Post running of Azurify you can follow the Juypter Notebook located within the repo under publication_code/buil_model.iypnb.
+
 ## Runtime
 
 Azurify annotates 100,000 variants in approximately 30 minutes of runtime. You should expect to need more than 16GB of memory and longer runtimes as record volume increases. If you file that are much larger, considering breaking your input into smaller files if you are on a low memory machine. 
