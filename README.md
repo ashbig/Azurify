@@ -17,7 +17,7 @@ The output classes being pathogenic, Likely pathogenic, uncertain significance (
 
 ## Installation
 
-Azurify is written in python 3 and has additional dependencies that can be installed via pip and git. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually.
+Azurify is written in python 3 and has additional dependencies that can be installed via pip and git. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually, but all dependencies associated with our publication are clearly marked at the top of all corresponding notebooks. 
 ```
 #git lfs is required for large resource files -- https://git-lfs.com/
 
