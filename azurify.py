@@ -150,7 +150,7 @@ def parse_arguments():
     parser.add_argument("-i", "--input_file", metavar="FILE_PATH", required=False, type=str, help="Specify the input file.")
     parser.add_argument("-o", "--output_filename", metavar="OUTPUT_FILENAME", required=False,type=str, help="Specify the output filename.")
     parser.add_argument("-g", "--geneom_build", metavar="GENOME_BUILD", required=False, type=str, help="Specify the input genome, i.e hg19 or hg38.")
-    parser.add_argument("-s", "--snpeff_jar_path", metavar="SNPEFF_JAR_PATH", required=True, type=str, help="Specify the path to the snpeff jar file.")
+    parser.add_argument("-s", "--snpeff_jar_path", metavar="SNPEFF_JAR_PATH", required=False, type=str, help="Specify the path to the snpeff jar file.")
     parser.add_argument("-d", "--no_drug_targets", metavar="Drug Targets", required=False, type=str, help="Omit the use of drug targets in the model.")  
     # Parse the command-line arguments
     args = parser.parse_args()
@@ -168,28 +168,32 @@ def main():
     args = parse_arguments()
     out_file = args.output_filename
     uin = args.input_file
-    udf = pd.read_csv(uin, sep='\t',low_memory=False)
     progress_bar.update(5)
+    
+# #### features to be implemented for docker/conda
+#     udf = pd.read_csv(uin, sep='\t',low_memory=False)
 
-    #get output directory for intermediate files
-    directory = os.path.dirname(out_file)
-    filename = os.path.basename(out_file)
-    name, ext = os.path.splitext(filename)
 
-    #convert to hg19 if required
-    if args.geneom_build == 'hg38':
-        o19 = f"{name}{"hg19"}{ext}"
-        uin = convert38(uin, o19)
-        progress_bar.update(7)
+#     #get output directory for intermediate files
+#     directory = os.path.dirname(out_file)
+#     filename = os.path.basename(out_file)
+#     name, ext = os.path.splitext(filename)
 
-    #run snpeff
-    if args.snpeff_jar_path:
-        so = f"{name}{"snpeff"}{ext}"
-        az_in = run_snpeff(args.snpeff_jar_path, o19, so)
-        progress_bar.update(9)
+#     #convert to hg19 if required
+#     if args.geneom_build == 'hg38':
+#         o19 = f"{name}{"hg19"}{ext}"
+#         uin = convert38(uin, o19)
+#         progress_bar.update(7)
+
+#     ##run snpeff
+#     if args.snpeff_jar_path:
+#        so = f"{name}{"snpeff"}{ext}"
+#        az_in = run_snpeff(args.snpeff_jar_path, o19, so)
+#        progress_bar.update(9)
+
 
     
-    udf = pd.read_csv(az_in, sep='\t',low_memory=False)
+    udf = pd.read_csv(uin, sep='\t',low_memory=False)
 
 
     #split the df into columns used/not used by model
