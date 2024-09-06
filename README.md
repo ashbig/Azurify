@@ -46,7 +46,7 @@ Example Input:
 |chr12|57102878|T|C|32.51928021|STAT6|p.Asp419Gly|missense_variant|12|
 
 
-You may include additional columns to the rquired tab-delimtied input and they will be appended to your final results.
+You may include additional columns to the required tab-delimited input and they will be appended to your final results.
 
 ## Creating your own model
 
