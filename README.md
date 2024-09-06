@@ -10,9 +10,9 @@
                                   |___/ 
 ```
 
-Azurify aims to classify the pathogencity of small genomic variants by leveraging machine learning on a feature set of resources that can be used in the clinical classification of somatic variants for the purpose of cancer precision mediicine. 
+Azurify aims to classify the pathogencity of small genomic variants by leveraging machine learning on a feature set of resources that can be used in the clinical classification of somatic variants for the purpose of cancer precision medicine. 
 
-Azurify aggregates data from CiVIC, ClinVar, gnomAD, COSMIC, KEGG, PubMed, Uniprot and over 15,000 clinical classifications to create a model that can determinee the pathogencity of small genomic variants (SNVs & Indels < 50bp).
+Azurify aggregates data from CiVIC, ClinVar, gnomAD, COSMIC, KEGG, PubMed, Uniprot and over 15,000 clinical classifications to create a model that can determine the pathogencity of small genomic variants (SNVs & Indels < 50bp).
 The output classes being pathogenic, Likely pathogenic, uncertain significance (VUS), likely benign, and benign. 
 
 ## Installation
