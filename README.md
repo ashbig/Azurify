@@ -17,8 +17,11 @@ The output classes being pathogenic, Likely pathogenic, uncertain significance (
 
 ## Installation
 
-Azurify is written in python 3 and has additional dependencies that can be installed via pip. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually.
+Azurify is written in python 3 and has additional dependencies that can be installed via pip and git. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually.
 ```
+#git lfs is required for large resource files -- https://git-lfs.com/
+
+git lfs install
 git clone https://github.com/faryabiLab/Azurify.git
 
 pip install catboost
@@ -29,9 +32,9 @@ pip install tqdm
 ## Usage
 
 ```
-python azurify.py -i /path/to/input.tsv -o /path/to/output.tsv
+python azurify.py -i /path/to/example_input.tsv -o /path/to/output.tsv
 ```
-Azurify expects the following columns as input: CHROM, POS, REF, ALT, FAF, GENE, PCHANGE, EFFECT, EXON_Rank. All values can be derived when annotating a VCF with [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/). VCF and hg38 support are scheduled for the next release. Currently Azurify works using hg19 locations.
+Azurify expects the following columns as input: CHROM, POS, REF, ALT, FAF, GENE, PCHANGE, EFFECT, EXON_Rank. All values can be derived when annotating a VCF with [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/). Currently Azurify works using hg19 locations.
 
 Example Input:
 
