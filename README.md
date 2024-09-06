@@ -34,7 +34,7 @@ pip install tqdm
 ```
 python azurify.py -i /path/to/example_input.tsv -o /path/to/output.tsv
 ```
-Azurify expects the following columns as input: CHROM, POS, REF, ALT, FAF, GENE, PCHANGE, EFFECT, EXON_Rank. All values can be derived when annotating a VCF with [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/). Currently Azurify works using hg19 locations.
+Azurify expects the following columns as input: CHROM, POS, REF, ALT, FAF, GENE, PCHANGE, EFFECT, EXON_Rank. All values can be derived when annotating a VCF with [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/).
 
 Example Input:
 
