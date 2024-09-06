@@ -27,6 +27,7 @@ git clone https://github.com/faryabiLab/Azurify.git
 pip install catboost
 pip install pandas
 pip install tqdm
+pip install liftover
 
 ```
 ## Usage
