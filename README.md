@@ -49,7 +49,7 @@ You may include additional columns to the rquired tab-delimtied input and they w
 
 ## Creating your own model
 
-To create your own model using the Azurify feature set, simply run Azurify and follow the Juypter Notebook located within the repo under publication_code/build_model.iypnb. Please make sure your internal classificatiosn are under the defined column "CATEGORIZATION". 
+To create your own model using the Azurify feature set, simply run Azurify and follow the Juypter Notebook located within the repo under publication_code/build_model.iypnb. Please make sure your internal classifications are under the defined column "CATEGORIZATION". 
 
 ## Runtime
 
