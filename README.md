@@ -10,25 +10,32 @@
                                   |___/ 
 ```
 
-Azurify aims to classify the pathogencity of small genomic variants by leveraging machine learning on a feature set of resources that can be used in the clinical classification of somatic variants for the purpose of cancer precision mediicine. 
+Azurify aims to classify the pathogencity of small genomic variants by leveraging machine learning on a feature set of resources that can be used in the clinical classification of somatic variants for the purpose of cancer precision medicine. 
 
-Azurify aggregates data from CiVIC, ClinVar, gnomAD, COSMIC, KEGG, PubMed, Uniprot and over 15,000 clinical classifications to create a model that can determinee the pathogencity of small genomic variants (SNVs & Indels < 50bp).
+Azurify aggregates data from CiVIC, ClinVar, gnomAD, COSMIC, KEGG, PubMed, Uniprot and over 15,000 clinical classifications to create a model that can determine the pathogencity of small genomic variants (SNVs & Indels < 50bp).
 The output classes being pathogenic, Likely pathogenic, uncertain significance (VUS), likely benign, and benign. 
 
 ## Installation
 
-Installation of Azurify and its dependencies are made easy and can be found within the setup.py file. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually.
+Azurify is written in python 3 and has additional dependencies that can be installed via pip and git. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually, but all dependencies associated with our publication are clearly marked at the top of all corresponding notebooks. 
 ```
+#git lfs is required for large resource files -- https://git-lfs.com/
+
+git lfs install
 git clone https://github.com/faryabiLab/Azurify.git
-cd Azurify
-python setup.py
+
+pip install catboost
+pip install pandas
+pip install tqdm
+pip install liftover
+
 ```
 ## Usage
 
 ```
-python azurify.py -i /path/to/input.tsv -o /path/to/output.tsv
+python azurify.py -i /path/to/example_input.tsv -o /path/to/output.tsv
 ```
-Azurify expects the following columns as input: CHROM, POS, REF, ALT, FAF, GENE, PCHANGE, EFFECT, EXON_Rank. All values can be derived when annotating a VCF with [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/). VCF and hg38 support are scheduled for the next release. Currently Azurify works using hg19 locations.
+Azurify expects the following columns as input: CHROM, POS, REF, ALT, FAF, GENE, PCHANGE, EFFECT, EXON_Rank. All values can be derived when annotating a VCF with [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/).
 
 Example Input:
 
@@ -39,11 +46,15 @@ Example Input:
 |chr12|57102878|T|C|32.51928021|STAT6|p.Asp419Gly|missense_variant|12|
 
 
-You may include additional columns to the rquired tab-delimtied input and they will be appended to your final results.
+You may include additional columns to the required tab-delimited input and they will be appended to your final results.
+
+## Creating your own model
+
+To create your own model using the Azurify feature set, simply run Azurify and follow the Juypter Notebook located within the repo under publication_code/build_model.iypnb. Please make sure your internal classifications are under the defined column "CATEGORIZATION". 
 
 ## Runtime
 
-Azurify annotates 100,000 variants in approximately 30 minutes of runtime. You should expect to need more than 16GB of memory and longer runtimes as record volume increases.
+Azurify annotates 100,000 variants in approximately 30 minutes of runtime. You should expect to need more than 16GB of memory and longer runtimes as record volume increases. Considering chunking your input into smaller files if you are on a low memory machine. 
 
 ## The Azurify Project
 
