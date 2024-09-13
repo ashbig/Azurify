@@ -26,9 +26,9 @@ pip install -r requires.txt
 ## Usage
 
 ```
-python azurify.py -i /path/to/example_input.tsv -o /path/to/output.tsv
+python3 azurify.py -i hg38_example_input.txt -o /output/your/results/ -s /path/to/snpEff/snpEff.jar -g hg38
 ```
-Azurify expects the following columns as input: CHROM, START, STOP, REF, ALT, VAF in tab-delimited format.
+Azurify expects the following columns as input: CHROM, START, STOP, REF, ALT, VAF in tab-delimited format.  The current version of Azurify is based on hg19, but accepts hg38 positions via the -g hg38 parameter. 
 
 Example Input:
 
@@ -51,7 +51,7 @@ Azurify annotates 100,000 variants in approximately 30 minutes of runtime. You s
 
 ## The Azurify Project
 
-In addition to Azurify, we have provided all of the code used to develop as well as evaluate the Azurify model in an effort to ease the accesiblity of variant classification across the field. 
+In addition to Azurify, we have provided all of the code used to develop as well as evaluate the Azurify model should you want to generate your own data using our methodologies. 
 
 As the Azurify project expands we hope to include more resources as features, automate model generation to keep pace with the field and generate disease specific models. 
 We would also love to include training data beyond the borders of our instituion and seek to provide a framework where variant classification models can be shared to mitigate variability, so collaborators and contributors are encouraged to reach out. 
