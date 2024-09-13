@@ -28,15 +28,15 @@ pip install -r requires.txt
 ```
 python azurify.py -i /path/to/example_input.tsv -o /path/to/output.tsv
 ```
-Azurify expects the following columns as input: CHROM, POS, REF, ALT, FAF, GENE, PCHANGE, EFFECT, EXON_Rank. All values can be derived when annotating a VCF with [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/).
+Azurify expects the following columns as input: CHROM, START, STOP, REF, ALT, VAF in tab-delimited format.
 
 Example Input:
 
-|CHROM|POS|REF|ALT|FAF|GENE|PCHANGE|EFFECT|EXON_Rank|
-|:----|:----|:----|:----|:----|:----|:----|:----|:----|
-|chr7|66993288|C|T|50.85714286|SBDS|p.Val130Met|missense_variant|3|
-|chr4|1961074|G|A|41.69453735|WHSC1|p.Glu1099Lys|missense_variant|18|
-|chr12|57102878|T|C|32.51928021|STAT6|p.Asp419Gly|missense_variant|12|
+|CHROM|START|STOP|REF|ALT|VAF|
+|:----|:----|:----|:----|:----|:----|
+|chr7|66993288|66993289|C|T|50.85|
+|chr4|1961074|1961075|G|A|7.69|
+|chr12|57102878|57102879|T|C|42.51|
 
 
 You may include additional columns to the required tab-delimited input and they will be appended to your final results.
