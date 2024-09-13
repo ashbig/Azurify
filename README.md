@@ -1,14 +1,14 @@
 
-```
-  ___                     _   __        
- / _ \                   (_) / _|       
-/ /_\ \ ____ _   _  _ __  _ | |_  _   _ 
-|  _  ||_  /| | | || '__|| ||  _|| | | |
-| | | | / / | |_| || |   | || |  | |_| |
-\_| |_//___| \__,_||_|   |_||_|   \__, |
-                                   __/ |
-                                  |___/ 
-```
+                                                        ```
+                                                          ___                     _   __        
+                                                         / _ \                   (_) / _|       
+                                                        / /_\ \ ____ _   _  _ __  _ | |_  _   _ 
+                                                        |  _  ||_  /| | | || '__|| ||  _|| | | |
+                                                        | | | | / / | |_| || |   | || |  | |_| |
+                                                        \_| |_//___| \__,_||_|   |_||_|   \__, |
+                                                                                           __/ |
+                                                                                          |___/ 
+                                                        ```
 
 Azurify aims to classify the pathogencity of small genomic variants by leveraging the power of machine learning to operate on a feature-set derived from data sources recommended by professional societies and clinically annotated somatic variant datasets.
 
