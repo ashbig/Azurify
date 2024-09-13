@@ -26,7 +26,7 @@ pip install -r requires.txt
 ## Usage
 
 ```
-python3 azurify.py -i hg38_example_input.txt -o /output/your/results/ -s /path/to/snpEff/snpEff.jar -g hg38
+python3 azurify.py -i hg38_example_input.txt -o /path/results/ -s /path/snpEff/snpEff.jar -g hg38
 ```
 Azurify expects the following columns as input: CHROM, START, STOP, REF, ALT, VAF in tab-delimited format.  The current version of Azurify is based on hg19, but accepts hg38 positions via the -g hg38 parameter. 
 
