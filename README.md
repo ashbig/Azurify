@@ -53,7 +53,8 @@ Azurify annotates 100,000 variants in approximately 30 minutes of runtime. You s
 
 In addition to Azurify, we have provided all of the code used to develop as well as evaluate the Azurify model should you want to generate your own data using our methodologies. 
 
-As the Azurify project expands we hope to include more resources as features, automate model generation to keep pace with the field and generate disease specific models. 
+As the Azurify project expands we hope to include more resources as features, automate model generation to keep pace with the field, and generate disease specific models.
+
 We would also love to include training data beyond the borders of our instituion and seek to provide a framework where variant classification models can be shared to mitigate variability, so collaborators and contributors are encouraged to reach out. 
 
 ## License
