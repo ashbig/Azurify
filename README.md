@@ -13,16 +13,15 @@
 Azurify aims to classify the pathogencity of small genomic variants by leveraging the power of machine learning to operate on a feature-set derived from data sources recommended by professional societies and clinically annotated somatic variant datasets.
 
 Azurify aggregates data from CiVIC, ClinVar, gnomAD, COSMIC, KEGG, PubMed, Uniprot and over 15,000 clinical classifications to create a model that can determine the pathogencity of small genomic variants (SNVs & Indels < 50bp).
-Azurify outputs variant classes and probabilities for pathogenic, Likely pathogenic, uncertain significance (VUS), likely benign, and benign variants.
+Azurify outputs variant classes and probabilities for pathogenic, likely pathogenic, uncertain significance (VUS), likely benign, and benign variants.
 
 ## Installation
 
-Azurify is written in python 3 and can easily be installed via pip and git. Azurify is also dependent on a valid [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/) installation with hg19 as a queryable genome. Any dependencies associated with the Azurify publication may need to be installed manually, but all dependencies associated with our publication are clearly marked at the top of all corresponding notebooks. 
+Azurify is written in python3 and can easily be installed via pip and git. Azurify is also dependent on a valid [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/) installation with hg19 configured. Any dependencies associated with the Azurify publication may need to be installed manually and are clearly marked at the top of all corresponding notebooks. 
 ```
 git clone https://github.com/faryabiLab/Azurify.git
 cd Azurify
 pip install -r requires.txt
-
 ```
 ## Usage
 
