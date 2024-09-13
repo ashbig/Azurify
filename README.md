@@ -10,24 +10,18 @@
                                   |___/ 
 ```
 
-Azurify aims to classify the pathogencity of small genomic variants by leveraging machine learning on a feature set of resources that can be used in the clinical classification of somatic variants for the purpose of cancer precision medicine. 
+Azurify aims to classify the pathogencity of small genomic variants by leveraging the power of machine learning to operate on a feature-set derived from data sources recommended by professional societies and clinically annotated somatic variant datasets.
 
 Azurify aggregates data from CiVIC, ClinVar, gnomAD, COSMIC, KEGG, PubMed, Uniprot and over 15,000 clinical classifications to create a model that can determine the pathogencity of small genomic variants (SNVs & Indels < 50bp).
-The output classes being pathogenic, Likely pathogenic, uncertain significance (VUS), likely benign, and benign. 
+Azurify outputs variant classes and probabilities for pathogenic, Likely pathogenic, uncertain significance (VUS), likely benign, and benign variants.
 
 ## Installation
 
-Azurify is written in python 3 and has additional dependencies that can be installed via pip and git. Any dependencies associated with model and figure generation are outside of Azurify and will need to be installed manually, but all dependencies associated with our publication are clearly marked at the top of all corresponding notebooks. 
+Azurify is written in python 3 and can easily be installed via pip and git. Azurify is also dependent on a valid [snpEff](https://pcingola.github.io/SnpEff/snpeff/introduction/) installation with hg19 as a queryable genome. Any dependencies associated with the Azurify publication may need to be installed manually, but all dependencies associated with our publication are clearly marked at the top of all corresponding notebooks. 
 ```
-#git lfs is required for large resource files -- https://git-lfs.com/
-
-git lfs install
 git clone https://github.com/faryabiLab/Azurify.git
-
-pip install catboost
-pip install pandas
-pip install tqdm
-pip install liftover
+cd Azurify
+pip install -r requires.txt
 
 ```
 ## Usage
